@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat's catalogue</title>
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="page-body">
+    <svg style="display: none">          
+        
+        <symbol id="logo"  width="78" height="78">
+            <path d="M63.0559 28.8815L54.2119 28.8947L27.8012 53.7922H10.0354V36.4593L34.2348 13.8486L17.993 13.8992L0 30.6625V64.1511H34.0283L63.0418 36.5687L63.0559 28.8815Z" fill="white"/>
+            <path d="M43.9721 13.8486L14.9586 41.4318L14.9453 49.1182L23.7884 49.1049L50.1991 24.2075H67.9649V41.5404L43.7656 64.1511L60.0074 64.1013L78.0004 47.338V13.8486H43.9721Z" fill="white"/>
+        </symbol>
+
+        <symbol id="like" width="46" height="42" viewBox="0 0 46 42" >
+            <path d="M33.7812 0.695312C31.2851 0.695312 28.9966 1.4863 26.9794 3.04634C25.0456 4.54197 23.758 6.44693 23 7.83214C22.242 6.44684 20.9544 4.54197 19.0206 3.04634C17.0034 1.4863 14.7149 0.695312 12.2188 0.695312C5.25298 0.695312 0 6.39293 0 13.9485C0 22.1112 6.55347 27.696 16.4746 36.1505C18.1593 37.5863 20.0689 39.2138 22.0538 40.9494C22.3154 41.1785 22.6514 41.3047 23 41.3047C23.3486 41.3047 23.6846 41.1785 23.9462 40.9495C25.9312 39.2136 27.8408 37.5862 29.5265 36.1496C39.4465 27.696 46 22.1112 46 13.9485C46 6.39293 40.747 0.695312 33.7812 0.695312Z" fill="white" />
+        </symbol>        
+        
+        <symbol id="filter" width="15" height="15" viewBox="0 0 15 15">
+            <g clip-path="url(#clip0)">
+            <path d="M8.0853 11.6669L14.7604 4.99166C14.9149 4.83727 15 4.63118 15 4.41142C15 4.19167 14.9149 3.98557 14.7604 3.83118L14.2689 3.3396C13.9487 3.01973 13.4282 3.01973 13.1084 3.3396L7.50311 8.94492L1.89157 3.33338C1.73706 3.17899 1.53109 3.09375 1.31146 3.09375C1.09158 3.09375 0.885606 3.17899 0.730973 3.33338L0.239635 3.82496C0.0851249 3.97947 3.76698e-06 4.18545 3.75737e-06 4.4052C3.74777e-06 4.62496 0.0851249 4.83105 0.239635 4.98544L6.9208 11.6669C7.0758 11.8216 7.28275 11.9066 7.50275 11.9061C7.7236 11.9066 7.93042 11.8216 8.0853 11.6669Z" fill="black"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+              <rect width="15" height="15" fill="white" transform="translate(15) rotate(90)"/>
+            </clipPath>
+            </defs>
+        </symbol>
+
+        <symbol id="arrow-up" width="18" height="18" viewBox="0 0 18 18" >
+            <g clip-path="url(#clip0)">
+            <path d="M8.29764 3.99939L0.287559 12.0096C0.102145 12.1949 -8.06437e-08 12.4422 -6.91167e-08 12.7059C-5.75898e-08 12.9696 0.102145 13.2169 0.287559 13.4022L0.87731 13.9921C1.2616 14.3759 1.88618 14.3759 2.26988 13.9921L8.99627 7.2657L15.7301 13.9996C15.9155 14.1848 16.1627 14.2871 16.4263 14.2871C16.6901 14.2871 16.9373 14.1848 17.1228 13.9995L17.7124 13.4097C17.8979 13.2242 18 12.9771 18 12.7134C18 12.4497 17.8979 12.2023 17.7124 12.0171L9.69504 3.99939C9.50904 3.81368 9.26071 3.71168 8.99671 3.71227C8.73169 3.71168 8.48349 3.81368 8.29764 3.99939Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+              <rect width="18" height="18" fill="white" transform="translate(0 18) rotate(-90)"/>
+            </clipPath>
+            </defs>
+        </symbol>            
+            
+    </svg>    
+
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__container">
+           <div class="logo">   
+              <a class="logo__link" href="#">
+                <svg class="logo__svg-icon" width="78" height="78" viewBox="0 0 78 78" >
+                    <use xlink:href="#logo"></use>
+                </svg>
+              </a> 
+            </div>   
+            <div class="toggle">   
+              <span class="toggle__open"></span> 
+            </div>        
+            <nav class="main-nav main-nav__closed">                   
+              <ul class="main-nav__list">  
+                <li class="main-nav__item">
+                    <a class="main-nav__link">
+                        Main
+                    </a>    
+                </li>   
+                <li class="main-nav__item">
+                    <a class="main-nav__link">
+                        Gallery
+                    </a>    
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link">
+                        News
+                    </a>    
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__link">
+                        Profile
+                    </a>    
+                </li> 
+            </ul>         
+          </nav>             
+             
+          <div class="contacts">
+              <a class="contacts__phone" href="tel.:+544349000000">
+                +544 3490 00000
+              </a>   
+              <p class="contacts__text"> 
+                  Звони скорее!
+              </p>    
+          </div>  
+         </div>  
+          <div class="search">
+            <p class="search__output">
+                Найдено 349 котов
+            </p>    
+        </div> 
+      </div>    
+    </header>
+
+    <main class="page-main">
+        <h1 class="visually-hidden">Cat's catalogue</h1>
+        <div class="sort">
+         <div class="sort__wrapper">   
+           <p class="sort__text">
+              Сортировать по:
+           </p>
+           <div class="sort__filter" id="price">
+              <p class="sort__description">  
+                Цене
+              </p>  
+              <svg class="sort__svg-icon" width="15" height="15" viewBox="0 0 15 15" >
+                <use xlink:href="#filter"></use>
+              </svg>
+           </div>   
+           <div class="sort__filter" id="age">
+              <p class="sort__description">  
+                Возрасту
+              </p>               
+              <svg class="sort__svg-icon" width="15" height="15" viewBox="0 0 15 15" >
+                <use xlink:href="#filter"></use>
+              </svg>
+           </div>  
+          </div>  
+        </div>
+      
+        <ul class="items">
+            <li class="items__card">
+                <span class="items__promo">-40%</span>
+                <button class="items__button" type="button">
+                  <svg class="items__svg-icon" width="46" height="42" viewBox="0 0 46 42" >
+                    <use xlink:href="#like"></use>
+                  </svg>
+                </button>                
+                <img class="items__pic" src="img/cat_1.jpg" width="380" height="264" alt="cat 1"></img>
+                <div class="items__wrapper">
+                    <h2 class="items__heading">
+                        Кот полосатый
+                    </h2> 
+                    <div class="items__content">
+                        <p class="items__description">Коричневый окрас</p>
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">3 мес.</span>                            
+                            <span class="items__feature">Возраст</span>                            
+                        </div>  
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">4</span>                            
+                            <span class="items__feature">Кол-во лап</span>                            
+                        </div>   
+                    </div> 
+                    <p class="items__price"> 
+                        30 000 руб.  
+                    </p>    
+                </div>
+                <a class="items__link" href="#">
+                    Купить   
+                </a>                 
+            </li>    
+            <li class="items__card">             
+                <button class="items__button" type="button">
+                  <svg class="items__svg-icon" width="46" height="42" viewBox="0 0 46 42" >
+                    <use xlink:href="#like"></use>
+                  </svg>
+                </button>                
+                <img class="items__pic" src="img/cat_2.jpg" width="380" height="264" alt="cat 2"></img>
+                <div class="items__wrapper">
+                    <h2 class="items__heading">
+                        Кот полосатый
+                    </h2> 
+                    <div class="items__content">
+                        <p class="items__description">Коричневый окрас</p>
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">4 мес.</span>                            
+                            <span class="items__feature">Возраст</span>                            
+                        </div>  
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">4</span>                            
+                            <span class="items__feature">Кол-во лап</span>                            
+                        </div>   
+                    </div> 
+                    <p class="items__price"> 
+                        40 000 руб.  
+                    </p>    
+                </div>
+                <a class="items__link items__link--info" href="#">
+                   Продан  
+                </a>                 
+            </li>    
+            <li class="items__card">               
+                <button class="items__button" type="button">
+                  <svg class="items__svg-icon" width="46" height="42" viewBox="0 0 46 42" >
+                    <use xlink:href="#like"></use>
+                  </svg>
+                </button>               
+                <img class="items__pic" src="img/cat_3.jpg" width="380" height="264" alt="cat 3"></img>
+                <div class="items__wrapper">
+                    <h2 class="items__heading">
+                        Кот полосатый
+                    </h2> 
+                    <div class="items__content">
+                        <p class="items__description">Коричневый окрас</p>
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">2 мес.</span>                            
+                            <span class="items__feature">Возраст</span>                            
+                        </div>  
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">4</span>                            
+                            <span class="items__feature">Кол-во лап</span>                            
+                        </div>   
+                    </div> 
+                    <p class="items__price"> 
+                        20 000 руб.  
+                    </p>    
+                </div>
+                <a class="items__link" href="#">
+                    Купить   
+                </a>                 
+            </li>    
+            <li class="items__card">                
+                <button class="items__button" type="button">
+                  <svg class="items__svg-icon" width="46" height="42" viewBox="0 0 46 42" >
+                    <use xlink:href="#like"></use>
+                  </svg>
+                </button>                
+                <img class="items__pic" src="img/cat_1.jpg" width="380" height="264" alt="cat 1"></img>
+                <div class="items__wrapper">
+                    <h2 class="items__heading">
+                        Кот полосатый
+                    </h2> 
+                    <div class="items__content">
+                        <p class="items__description">Коричневый окрас</p>
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">2 мес.</span>                            
+                            <span class="items__feature">Возраст</span>                            
+                        </div>  
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">4</span>                            
+                            <span class="items__feature">Кол-во лап</span>                            
+                        </div>   
+                    </div> 
+                    <p class="items__price"> 
+                        25 000 руб.  
+                    </p>    
+                </div>
+                <a class="items__link" href="#">
+                    Купить   
+                </a>                 
+            </li>    
+            <li class="items__card">
+                <span class="items__promo">-40%</span>
+                <button class="items__button" type="button">
+                  <svg class="items__svg-icon" width="46" height="42" viewBox="0 0 46 42" >
+                    <use xlink:href="#like"></use>
+                  </svg>
+                </button>                
+                <img class="items__pic" src="img/cat_3.jpg" width="380" height="264" alt="cat 5"></img>
+                <div class="items__wrapper">
+                    <h2 class="items__heading">
+                        Кот полосатый
+                    </h2> 
+                    <div class="items__content">
+                        <p class="items__description">Коричневый окрас</p>
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">2 мес.</span>                            
+                            <span class="items__feature">Возраст</span>                            
+                        </div>  
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">4</span>                            
+                            <span class="items__feature">Кол-во лап</span>                            
+                        </div>   
+                    </div> 
+                    <p class="items__price"> 
+                        30 000 руб.  
+                    </p>    
+                </div>
+                <a class="items__link" href="#">
+                    Купить   
+                </a>                 
+            </li>    
+            <li class="items__card">               
+                <button class="items__button" type="button">
+                  <svg class="items__svg-icon" width="46" height="42" viewBox="0 0 46 42" >
+                    <use xlink:href="#like"></use>
+                  </svg>
+                </button>                
+                <img class="items__pic" src="img/cat_2.jpg" width="380" height="264" alt="cat 6"></img>
+                <div class="items__wrapper">
+                    <h2 class="items__heading">
+                        Кот полосатый
+                    </h2> 
+                    <div class="items__content">
+                        <p class="items__description">Коричневый окрас</p>
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">2 мес.</span>                            
+                            <span class="items__feature">Возраст</span>                            
+                        </div>  
+                        <div class="items__wrp">
+                            <span class="items__feature-desc">4</span>                            
+                            <span class="items__feature">Кол-во лап</span>                            
+                        </div>   
+                    </div> 
+                    <p class="items__price"> 
+                        10 000 руб.  
+                    </p>    
+                </div>
+                <a class="items__link items__link--info" href="#">
+                    Продан 
+                </a>                 
+            </li>    
+        </ul>   
+        <div class="container"> </div>
+        <div class="navigation">
+            <a class="navigation__link" href="#">Показать еще 20</a>
+            <button class="navigation__button">
+                <svg class="navigation__svg-icon" width="18" height="18" viewBox="0 0 18 18" >
+                    <use xlink:href="#arrow-up"></use>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="promo">
+                <p class="promo__slogan">
+                    Успей купить!
+                </p>
+                <p class="promo__text">    
+                    Подпишись и успей словить все акции
+                </p>    
+            </div>   
+            <form class="form" action="" method="POST">  
+                <div class="form__wrapper">
+                  <div class="form__container">  
+                    <input class="form__input" type="text" name="email" id="email" placeholder="Email">
+                    <span class="form__error"></span>
+                  </div>  
+                    <button class="form__button" type="submit" id="button">Подписаться</button>
+                </div> 
+                <div class="form__content">   
+                   <input class="form__checkbox" type="checkbox" name="subscribe" id="subscribe" value="1" checked>
+                   <label class="form__label" for="subscribe">Подписаться на новости</label>
+                </div>  
+            </form> 
+        </div>    
+    </footer>    
+
+    <div class="overlay">
+      <div class="overlay__content">
+        <div class="overlay__wrapper">
+          <p class="overlay__text">Подписка успешно<br> оформлена</p>
+        </div>  
+      </div> 
+    </div> 
+
+    <div class="info">
+      <span class="info__content"> 
+        Добавлено в избранное
+      </span>  
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/main-nav.js"></script>
+</body>
+
+</html>

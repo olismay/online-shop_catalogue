@@ -1,0 +1,40 @@
+.promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $desktop-width) {        
+        max-width: 370px;
+        align-items: stretch;
+    }
+
+    @media (min-width: $desktop-large-width) {        
+        max-width: 35.3%;
+    }
+}
+
+.promo__slogan {
+  margin-bottom: 5px;
+
+    @media (min-width: $desktop-width) {        
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 59px;
+        margin-bottom: 0;
+    }
+
+}
+
+.promo__text {
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media (min-width: $desktop-width) {   
+        text-align: left;     
+        font-size: 28px;
+        line-height: 91.2%;
+        padding-bottom: 5px;
+        margin-bottom: 0;
+    }
+}

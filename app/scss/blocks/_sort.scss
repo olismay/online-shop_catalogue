@@ -1,0 +1,75 @@
+.sort {
+    font-size: 18px;
+    min-height: 200px;
+    margin-top: 2px;
+    display: flex;   
+    min-width: 100%;
+ 
+    @media (min-width: $desktop-width) {
+        min-height: 100px;
+        margin-top: 2px;
+        display: flex;   
+        flex-direction: row; 
+        align-items: center;
+    }
+}
+
+.sort__wrapper {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    min-width: 90%;
+    margin: 0 auto;
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        min-width: 470px;
+        margin: 0 0 2px;
+    }
+}
+
+.sort__text {
+    font-weight: bold;   
+}
+
+.sort__filter:first-of-type {
+    min-width: 85px;
+    min-height: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;
+    
+    @media (min-width: $desktop-width) {
+        min-width: 85px;
+        min-height: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        cursor: pointer;
+    }
+}
+
+.sort__filter:first-of-type .sort__svg-icon {
+    margin-right: 8px;
+}
+
+.sort__filter:last-of-type {
+    min-width: 125px;
+    min-height: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.sort__filter:last-of-type .sort__description {    
+    margin-right: 26px;    
+}
+
+.sort__filter:last-of-type .sort__svg-icon {
+    margin-right: 2px;
+    margin-top: 2px;
+}

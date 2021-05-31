@@ -1,0 +1,17 @@
+.logo {
+    align-self: flex-start;
+    padding-left: 30px;
+    padding-top: 15px;
+
+    @media (min-width: $desktop-width) {
+       align-self: auto;
+       padding-left: 0;
+       padding-top: 0;
+   }
+}
+
+.logo__svg-icon  {
+   @media (min-width: $desktop-width) {
+       margin-top: 26px;
+   }
+}

@@ -1,0 +1,26 @@
+.toggle {
+    position: absolute;
+    z-index: 4;
+    top: 40px;
+    right: 30px;
+    min-width: 40px;
+    min-height: 40px;
+    cursor: pointer;
+}
+
+.toggle__open {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 40px;
+    height: 3px;
+    cursor: pointer;
+    box-shadow: 0 10px 0 0 #fff, 0 20px 0 0 #fff;   
+
+    @media (min-width: $desktop-width) {
+       display: none;
+    } 
+}
+

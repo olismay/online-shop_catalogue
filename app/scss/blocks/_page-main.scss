@@ -1,0 +1,13 @@
+.page-main  {
+    margin: 0 auto;
+    min-height: 1380px;
+
+    @media (min-width: $desktop-width) { 
+       min-width: 1180px;
+       max-width: 1180px;
+    }
+
+    @media (min-width: $desktop-large-width) {      
+       max-width: 1280px;
+    }
+}
